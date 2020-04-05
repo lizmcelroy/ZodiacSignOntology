@@ -1,0 +1,1748 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/janei/ontologies/2020/2/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/janei/ontologies/2020/2/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology">
+        <rdfs:isDefinedBy>The ontology focuses on relations between zodiac signs and their traits. There are 12 total zodiac, or astrological signs. The ontology concerns information about the zodiac signs, and covers their seasons, qualities, elements, and rulings planets, as well as the months the signs cover.</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isElementof"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element"/>
+        <rdfs:isDefinedBy>Describes the natural element a zodiac sign has. Zodiac signs have only one element.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isMonthof"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>Describes the months a zodiac sign encompasses. Zodiac signs encompass two months within their span.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isQualityof"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <rdfs:isDefinedBy>Describes the quality a zodiac sign has of either cardinal, mutable, or fixed. A zodiac sign will only have one quality.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isRulingPlanetof"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>Describes the ruling planets that have influence over zodiac signs. Zodiac signs will only have one or two ruling planets.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isSeasonof"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <rdfs:isDefinedBy>Describes the season that a zodiac sign falls within. Zodiac signs have one season.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isElementof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isElementof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Describes the element of a zodiac sign. Zodiac signs have one element.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isMonthof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isMonthof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Describes the month of a zodiac sign. Zodiac signs span over two months.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isQualityof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isQualityof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Describes the quality of a zodiac sign. Zodiac signs have only one quality.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isRulingPlanetof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isRulingPlanetof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Describes the ruling planets that have influence over a zodiac sign. Zodiac signs will only have one or two ruling planets.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isSeasonof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#isSeasonof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Describes the seasons of zodiac signs. Zodiac signs have one season.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element"/>
+        <rdfs:isDefinedBy>One of four natural elements, associated with the spring season.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The fourth month of the calendar year, within the season of spring.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aquarius -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aquarius">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Uranus"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Uranus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Uranus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An air zodiac sign occuring between January 20th - February 18th.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A fire zodiac sign occuring between March 21st - April 19th.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The eighth month of the calendar year, within the season of summer.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cancer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cancer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Moon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Moon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A water zodiac sign occuring between June 21st - July 22nd.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Capricorn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Capricorn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An earth zodiac sign occuring between December 22nd - January 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <rdfs:isDefinedBy>One of three zodiac sign qualities that is associated with &quot;reacting&quot; behaviours.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The twelfth month of the calendar year, within the season of winter.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element"/>
+        <rdfs:isDefinedBy>One of the four natural elements, associated with the winter season.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Substances that are natural elements that a zodiac signs is associated with. Each zodiac sign only has one element.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <rdfs:isDefinedBy>The third season of the calendar year.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The second month of the calendar year, within the season of spring.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element"/>
+        <rdfs:isDefinedBy>One of the four natural elements, associated with the summer season.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <rdfs:isDefinedBy>One of three zodiac sign qualities that is associated with &quot;stable&quot; or &quot;persistent&quot; behaviour.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Gemini -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Gemini">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An air zodiac sign occuring between May 22nd - June 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The first month of the calendar year, within the season of winter.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The seventh month of the calendar year, within the season of summer.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The sixth month of the calendar year, within the seasons of spring and summer.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet for the zodiac signs of Sagitarius and Pisces. Associated with the Roman king of the gods.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Leo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Leo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A fire zodiac sign occuring between July 22nd - August 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Libra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Libra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An air zodiac sign occuring between September 22nd - October 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The third month of the calendar year, within the seasons of winter and spring.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet for the zodiac signs of Aries and Scorpio. Associated with the Roman god of war, and intensity.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The fifth month of the calendar year, within the season of spring.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet for the zodiac signs of Gemini and Virgo. Associated with the Roman messenger of the Gods and communication.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>The division of the year into twelve periods.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Moon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Moon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of the zodiac sign, Cancer. Associated with ones unconscious self and consistency.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality"/>
+        <rdfs:isDefinedBy>One of three zodiac sign qualities associated with &quot;flexible&quot; behaviours.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Neptune -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Neptune">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of Pisces and Aquarius. Associated with the Roman God of the Sea and intuition.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The eleventh month of the calendar year, within the seasons of fall and winter.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The tenth month of the calendar year, within the season of fall.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pisces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pisces">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Neptune"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Neptune"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A water zodiac sign occuring between February 22nd - March 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pluto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pluto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of the zodiac sign, Scorpio. Associated with the Roman God of the Underworld and ones subconcious self.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Quality">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Three modalities that are related to the behaviour or reaction of a zodiac sign. Zodiac signs can only have one quality. There are four zodiac signs assigned to each quality.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Planets (out of twelve) that have influence over the zodiac signs.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sagittarius -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sagittarius">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A fire zodiac sign occuring between November 22nd - December 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of the zodiac sign, Capricorn. Associated with the Roman Titan Cronus and restriction.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Scorpio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Scorpio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pluto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pluto"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>A water zodiac sign that occurs between October 23rd - November 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:isDefinedBy>Four divisions of the year that are identified by particular weather patterns.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Month"/>
+        <rdfs:isDefinedBy>The ninth month of the calendar year, within the seasons of summer and fall.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <rdfs:isDefinedBy>The first season of the calendar year.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <rdfs:isDefinedBy>The second season of the calendar year.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sun">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of the zodiac sign, Leo. Associated with the conscious mind.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Taurus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Taurus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An earth zodiac sign occuring between April 22nd - May 21st</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Uranus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Uranus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of the zodiac sign, Aquarius. Assoicated with discovery.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#RulingPlanet"/>
+        <rdfs:isDefinedBy>The ruling planet of the zodiac signs, Libra and Taurus. Associated with the Roman Goddess of Love and money.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Virgo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Virgo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasMonth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasRulingPlanet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#hasSeason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>An earth zodiac sign occuring between August 22nd - September 21st.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Element"/>
+        <rdfs:isDefinedBy>One of the four natural elements, associated with the fall season.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Season"/>
+        <rdfs:isDefinedBy>The fourth season of the calendar year.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#ZodiacSign">
+        <rdfs:isDefinedBy>Western concept of astrological signs that a person can identify as one of twelve of depending on when they are born.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#AirElement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#EarthElement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#FireElement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#WaterElement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#April"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#August"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#December"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#February"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#January"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#July"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#June"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#March"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#May"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#November"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#October"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#September"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aquarius"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aries"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cancer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Capricorn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Gemini"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Leo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Libra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pisces"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sagittarius"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Scorpio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Taurus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Virgo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Aquarius"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Capricorn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pisces"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Cardinal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fixed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mutable"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Fall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Spring"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Summer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Winter"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Jupiter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mars"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Mercury"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Moon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Neptune"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Pluto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Saturn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Sun"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Uranus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/janei/ontologies/2020/2/zodiacsignontology#Venus"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
